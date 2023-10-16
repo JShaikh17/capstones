@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="css/bootstrap.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
+        <a href="/" class="d-flex align-items-center me-auto mb-lg-0 text-decoration-none">
+          <!-- <svg class="bi " width="40" height="32" role="img" aria-label="Bootstrap">
+              <use xlink:href="#bootstrap"></use>
+            </svg> -->
+          Tyler And Salin
+        </a>
+        <ul class="nav nav-pills col-12 col-lg-auto me-lg-auto mb-4 justify-content-center mb-md-0 mt-4">
+          <li><a href="index.html" class="nav-link px-2 active" aria-current="page">Home</a></li>
+          <li><a href="product.html" class="nav-link px-2">Products</a></li>
+          <li><a href="about.html" class="nav-link px-2">About Us</a></li>
+          <li><a href="carts.html" class="nav-link px-2">Cart</a></li>
+        </ul>
+
+        <form class="col-12 col-lg-auto mb-3 mb-lg-0 me-lg-3" role="search">
+          <input type="search" class="form-control text-bg-white" placeholder="Search..." aria-label="Search" />
+        </form>
+
+        <div class="text-end">
+          <a href="login.html"><button type="button" class="btn btn-primary me-2">Sign-In</button></a>
+          <a href="signup.html"><button type="button" class="btn btn-primary me-2">Sign-Up</button></a>
+        </div>
+      </div>
+    </div>
+
+    <div style="margin-top: 200px">
+      <main class="form-signin w-50 m-auto">
+        <form>
+          <h1 class="h3 mb-3 fw-normal">SIGN UP</h1>
+          <div class="form-floating">
+            <div class="col-sm-6 responsive-mb-15">
+              <label for="register-fname" class="blue-label" data-i18n="_FirstName_"
+                ><span class="ng-scope">First Name</span></label
+              >
+              <input
+                type="text"
+                id="register-fname"
+                name="firstName"
+                ng-model="$ctrl.form.firstName"
+                ng-disabled="$ctrl.submitting"
+                class="form-control ng-pristine ng-untouched ng-empty ng-invalid ng-invalid-required ng-valid-maxlength"
+                maxlength="40"
+                required=""
+              />
+              <div
+                class="ng-hide firstName_error ng-scope ng-active"
+                ng-messages="register.firstName.$error"
+                role="alert"
+                ng-show="register.$submitted &amp;&amp; (!register.firstName.focused || ( register.firstName.focused &amp;&amp; register.firstName.showError ) )"
+              >
+                <!-- ngRepeat: (key, message) in register.firstName.messages -->
+                <div ng-repeat="(key, message) in register.firstName.messages" class="ng-scope">
+                  <!-- ngMessageExp: key --><label
+                    for="register-fname"
+                    ng-message-exp="key"
+                    class="text-danger ng-binding ng-scope"
+                    >Please fill out this field as it is required.</label
+                  >
+                </div>
+                <!-- end ngRepeat: (key, message) in register.firstName.messages -->
+                <div ng-repeat="(key, message) in register.firstName.messages" class="ng-scope">
+                  <!-- ngMessageExp: key -->
+                </div>
+                <!-- end ngRepeat: (key, message) in register.firstName.messages -->
+              </div>
+            </div>
+            <div class="col-sm-6">
+              <label for="register-lname" class="blue-label" data-i18n="_LastName_"
+                ><span class="ng-scope">Last Name</span></label
+              >
+              <input
+                type="text"
+                id="register-lname"
+                name="lastName"
+                ng-model="$ctrl.form.lastName"
+                ng-disabled="$ctrl.submitting"
+                class="form-control ng-pristine ng-empty ng-invalid ng-invalid-required ng-valid-maxlength ng-touched"
+                maxlength="40"
+                required=""
+              />
+              <div
+                class="ng-hide lastName_error ng-scope ng-active"
+                ng-messages="register.lastName.$error"
+                role="alert"
+                ng-show="register.$submitted &amp;&amp; (!register.lastName.focused || ( register.lastName.focused &amp;&amp; register.lastName.showError ) )"
+              >
+                <!-- ngRepeat: (key, message) in register.lastName.messages -->
+                <div ng-repeat="(key, message) in register.lastName.messages" class="ng-scope">
+                  <!-- ngMessageExp: key --><label
+                    for="register-lname"
+                    ng-message-exp="key"
+                    class="text-danger ng-binding ng-scope"
+                    >Please fill out this field as it is required.</label
+                  >
+                </div>
+                <!-- end ngRepeat: (key, message) in register.lastName.messages -->
+                <div ng-repeat="(key, message) in register.lastName.messages" class="ng-scope">
+                  <!-- ngMessageExp: key -->
+                </div>
+                <!-- end ngRepeat: (key, message) in register.lastName.messages -->
+              </div>
+            </div>
+            <!-- <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com" />
+            <label for="floatingInput">First Name</label>
+          </div>
+          <div class="form-floating">
+            <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com" />
+            <label for="floatingInput">Last Name</label> -->
+          </div>
+          <div class="form-floating">
+            <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com" />
+            <label for="floatingInput">Email address</label>
+          </div>
+          <div class="form-floating">
+            <input type="password" class="form-control" id="floatingPassword" placeholder="Password" />
+            <label for="floatingPassword">Password</label>
+          </div>
+          <div class="form-floating">
+            <input type="password" class="form-control" id="floatingPassword" placeholder="Password" />
+            <label for="floatingPassword">ReEnter Password</label>
+          </div>
+           <div class="row">
+            <div class="col-md-6 mx-auto"></div>
+            <h3 class="mb-4 text-center">How did you hear about us?</h3>
+          </div>
+          <div class="row">
+            <div class="form-check mb-3">
+              <input class="form-check-input" type="radio" name="Survey" id="flexRadioPsoter" checked>
+              <label class="form-check-label" for="flexRadioPsoter">Poster</label>
+            </div>
+            <div class="row">
+              <div class="form-check mb-3">
+                <input class="form-check-input" type="radio" name="Survey" id="flexRadioPsoter" checked>
+                <label class="form-check-label" for="flexRadioPsoter">Newspaper Ad</label>
+              </div>
+              <div class="row">
+                <div class="form-check mb-3">
+                  <input class="form-check-input" type="radio" name="Survey" id="flexRadioPsoter" checked>
+                  <label class="form-check-label" for="flexRadioPsoter">Socail Media</label>
+                </div>
+          </div>
+          <div class="form-check text-start my-3">
+            <input class="form-check-input" type="checkbox" value="remember-me" id="flexCheckDefault" />
+            <label class="form-check-label" for="flexCheckDefault"> Remember me </label>
+          </div>
+          <button class="btn btn-primary w-100 py-2" type="submit">Sign Up</button>
+
+          <p class="mt-5 mb-3 text-body-secondary">©2023</p>
+
+        </form>
+      </main>
+    </div>
+
+    <script src="/docs/5.3/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>
